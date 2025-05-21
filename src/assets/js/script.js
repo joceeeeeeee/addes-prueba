@@ -375,7 +375,7 @@ function enviarAlMesero() {
   setKitchen(kitchenOrders);
 
   // Vaciar el pedido después de enviarlo
-  localStorage.removeItem("pedido");
+  //localStorage.removeItem("pedido");
 
   // Actualizar el contador a 0
   actualizarContador();
