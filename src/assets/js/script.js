@@ -369,7 +369,9 @@ function enviarAlMesero() {
     alert("No tienes productos en el pedido.");
     return;
   }
-  // Redirige a la página index.html
-  window.location.href = "index.html";
+    // Actualizar el contador a 0
+  actualizarContador();
+  alert("Pedido enviado al mesero.");
+window.location.href = "index.html";
   // Si quieres hacer alguna acción adicional antes de redirigir, como guardar en un servidor, puedes hacerla aquí.
 }
