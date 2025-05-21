@@ -365,25 +365,11 @@ function getPedido() {
 //MODIFICAR IMPORTANTE, NECESITA ACTUALIZAR EL CONTADOR
 function enviarAlMesero() {
   const pedido = getPedido();
-  if (pedido.length === 0) {
-    alert("No hay productos en el pedido.");
+  if (!pedido.length) {
+    alert("No tienes productos en el pedido.");
     return;
   }
-
-  const kitchenOrders = getKitchen();
-  kitchenOrders.push({ timestamp: Date.now(), items: pedido });
-  setKitchen(kitchenOrders);
-
-  // Vaciar el pedido después de enviarlo
-  //localStorage.removeItem("pedido");
-
-  // Actualizar el contador a 0
-  actualizarContador();
-
-  // Cerrar el modal (opcional si usas Bootstrap)
-  const modal = bootstrap.Modal.getInstance(ordenModal);
-  if (modal) modal.hide();
-
-  alert("Pedido enviado al mesero.");
-window.location.href = "index.html";
+  // Redirige a la página index.html
+  window.location.href = "index.html";
+  // Si quieres hacer alguna acción adicional antes de redirigir, como guardar en un servidor, puedes hacerla aquí.
 }
